@@ -1,0 +1,305 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: radial-gradient(circle at 10% 20%, #021002, transparent 30%), radial-gradient(circle at 90% 80%, #063f06, transparent 40%), radial-gradient(circle at 40% 60%, #042904, transparent 50%), radial-gradient(circle at 60% 40%, #021002, transparent 60%), radial-gradient(circle at 20% 80%, #063f06, transparent 70%), radial-gradient(circle at 80% 20%, #042904, transparent 80%), #021002;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(2, 16, 2, 0.8);
+    border-radius: 40px;
+    padding: 8px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.4s ease, right 0.4s ease, transform 0.4s ease, background 0.4s ease;
+    will-change: left, right, transform;
+}
+header.scrolled {
+    left: auto;
+    right: 20px;
+    transform: none;
+    background: rgba(2, 16, 2, 0.95);
+}
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 350;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+nav a.active {
+    background: linear-gradient(45deg, #d1e452, #19b805);
+    color: #021002;
+    font-weight: 525;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border: 1px solid #7a757596;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    text-align: center;
+}
+.container img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+.container img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+h1 {
+    font-size: 45px;
+    font-weight: 520;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+p {
+    font-size: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 5px 0;
+}
+.button-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    justify-content: center;
+}
+button {
+    font-family: 'Work Sans', sans-serif;
+    background: linear-gradient(45deg, #d1e452, #19b805);
+    border: 1px solid white;
+    border-radius: 40px;
+    height: 60px;
+    width: 140px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background 0.7s ease-in-out;
+}
+button:hover {
+    background: black;
+    transform: scale(1.05);
+}
+a[href="https://www.linkedin.com/in/mahin-chowdhury-a5a2502b9/"] button:hover {
+    background: #0077B5;
+}
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.icons-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+.icons-container img:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+#about {
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 45px;
+    background: rgba(2, 16, 2, 0.8);
+}
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, white, rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+#experience {
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(2, 16, 2, 0.8);
+}
+.experience-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#experience h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, white, rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.experience-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.experience-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 15px 20px 20px;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(158, 255, 165, 0.6);
+}
+.experience-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(158, 255, 165, 0.95);
+}
+.experience-box .company {
+    font-size: 24px;
+    margin: 0;
+    background: linear-gradient(to right, white, rgb(207, 243, 209));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.experience-box .date {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+.experience-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.experience-box ul li {
+    margin-bottom: 12px;
+}
+#projects {
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(2, 16, 2, 0.8);
+}
+.projects-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, white, rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.projects-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.project-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0px 25px 20px 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(158, 255, 165, 0.6);
+}
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(158, 255, 165, 0.95);
+}
+.project-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, white, rgb(207, 243, 209));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.project-box p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.project-box p:nth-of-type(2) {
+    margin-top: 10px;
+}
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-icons {
+    display: flex;
+    gap: 10px;
+}
+.project-icons img {
+    width: 30px;
+    height: 30px;
+}
+.project-box a {
+    color: white;
+    text-decoration: underline;
+}
+.button-container a[href="https://github.com/MahinC68?tab=repositories"] button:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+.button-container a[href="https://www.linkedin.com/in/mahin-chowdhury-a5a2502b9/"] button:hover {
+    box-shadow: 0 0 12px rgba(0, 136, 255, 0.9);
+}
+#about a {
+    color: white;
+    text-decoration: none;
+}
+#about a:hover {
+    text-decoration: underline;
+}
+.appear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
