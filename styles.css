@@ -363,8 +363,9 @@ button:hover {
     gap: 10px;
 }
 .project-icons.grid-2x2 {
-    flex-wrap: wrap;
-    width: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 30px);
+    gap: 10px;
 }
 .project-icons img {
     width: 30px;
